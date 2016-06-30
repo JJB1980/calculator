@@ -7,3 +7,4 @@ run from terminal: `npm test`
 
 #Run Application
 run from terminal: `npm start`
+then navigate to  [here](http://localhost:3030/)
