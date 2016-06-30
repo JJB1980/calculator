@@ -20,7 +20,9 @@ a {
   float: left;
 }
 .calc-result {
-  width: 200px;
+  width: 207px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .result {
   background-color: black;
@@ -38,6 +40,7 @@ a {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
+  border: 1px solid white;
 }
 .calc-number {
   background-color: black;
