@@ -1,12 +1,12 @@
-var sinon = require('sinon');
-var chai = require('chai');
-var expect = chai.expect;
+const sinon = require('sinon');
+const chai = require('chai');
+const expect = chai.expect;
 
-var actions = require('../routes/actions.js');
+const actions = require('../routes/actions.js');
 
 describe("Actions", function() {
   describe("API actions", function() {
-      var req,res,spy;
+      let req,res,spy;
 
       beforeEach(function () {
         req = res = {};
@@ -23,22 +23,22 @@ describe("Actions", function() {
       });
 
       it("should add 3 + 2 correctly", function () {
-        var result = actions.parseByOperator("addition", req, res);
+        const result = actions.parseByOperator("addition", req, res);
         expect(result).to.equal(5)
       });
 
       it("should subtract 3 - 2 correctly", function () {
-        var result = actions.parseByOperator("subtraction", req, res);
+        const result = actions.parseByOperator("subtraction", req, res);
         expect(result).to.equal(1)
       });
 
       it("should multiply 3 * 2 correctly", function () {
-        var result = actions.parseByOperator("multiplication", req, res);
+        const result = actions.parseByOperator("multiplication", req, res);
         expect(result).to.equal(6)
       });
 
       it("should divide 3 / 2 correctly", function () {
-        var result = actions.parseByOperator("division", req, res);
+        const result = actions.parseByOperator("division", req, res);
         expect(result).to.equal('1.50')
       });
 

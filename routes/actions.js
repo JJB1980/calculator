@@ -1,14 +1,14 @@
 
 function execute(operator, req, res) {
-  var result = parseByOperator(operator, req);
+  const result = parseByOperator(operator, req);
   if ((!result && result !== 0) || result === Infinity) {
     res.status(500);
     result = 'Error';
     res.json({result});
     return;
   }
-  var linkTypes = ['addition', 'multiplication', 'subtraction', 'division'];
-  var _links = [];
+  const linkTypes = ['addition', 'multiplication', 'subtraction', 'division'];
+  const _links = [];
   linkTypes.forEach((link) => {
     _links.push({
       rel: link,
@@ -22,10 +22,10 @@ function execute(operator, req, res) {
 }
 
 function parseByOperator(operator, req) {
-  var val1 = parseFloat(req.params.val1) ;
-  var val2 = parseFloat(req.params.val2);
-  var result = 0;
-  var operatorKey = '';
+  const val1 = parseFloat(req.params.val1) ;
+  const val2 = parseFloat(req.params.val2);
+  const result = 0;
+  let operatorKey = '';
   switch (operator) {
     case 'addition':
       result = val1 + val2;

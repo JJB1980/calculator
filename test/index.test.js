@@ -1,12 +1,12 @@
-var chai = require('chai');
-var expect = chai.expect;
+const chai = require('chai');
+const expect = chai.expect;
 
-var request = require('supertest');
-var express = require('express');
+const request = require('supertest');
+const express = require('express');
 
-var app = express();
+const app = express();
 
-var routes = require('../routes/index.js');
+const routes = require('../routes/index.js');
 
 app.use('/', routes);
 

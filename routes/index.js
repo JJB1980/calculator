@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var actions = require('./actions');
+const actions = require('./actions');
 
 router.get('/addition/:val1/:val2', (req, res) => {
   actions.execute('addition', req, res);
